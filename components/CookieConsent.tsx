@@ -1,5 +1,6 @@
-import { Box, Typography, Link } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Backdrop from "@mui/material/Backdrop";
+import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
 import { FC } from "react";
 import CookieConsent, { Cookies } from "react-cookie-consent";
@@ -61,15 +62,15 @@ const CookiesConsent: FC<CookieProps> = ({ children }) => {
                 }}
               >
                 <Typography variant="h6" sx={{ color: colors.black }}>
-                  {translations[TranslationKey.We_Care_About_Your_Data]}
+                  {translations[TranslationKey.TestTranslation]}
                 </Typography>
                 <Typography sx={{ color: colors.black }}>
-                  {translations[TranslationKey.We_And_Our_Partners]}
+                  {translations[TranslationKey.TestTranslation]}
                 </Typography>
               </Box>
               <Typography style={{ marginTop: "2%" }}>
                 <Link href={"/cookies"} style={{ color: colors.blue }}>
-                  {translations[TranslationKey.More_Informations]}
+                  {translations[TranslationKey.TestTranslation]}
                 </Link>
               </Typography>
             </Box>

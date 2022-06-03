@@ -7,6 +7,7 @@ import { FC, useEffect, useState } from "react";
 import createEmotionCache from "../utils/createEmotionCache";
 import { useRunningInBrowser } from "../hooks/useRunningInBrowserResult";
 import { TranslationKey } from "../translations/TranslationKey";
+import Layout from "../components/Layout";
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
@@ -41,7 +42,9 @@ const MyApp: FC<MyAppProps> = (props) => {
       initialCurrentLanguage={language}
       translations={translations}
     >
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </LanguageContextProvider>
   );
 };
