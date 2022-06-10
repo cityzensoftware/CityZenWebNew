@@ -1,10 +1,8 @@
-import { FC } from "react";
-import Box from "@mui/material/Box";
-import { Typography } from "@mui/material";
-import HomeContent from "../components/HomeContent";
+import React, { FC } from 'react';
+import './i18n';
 
-const Home: FC = () => {
-  return <HomeContent />;
-};
+import HomeContent from '../components/HomeContent';
+
+const Home: FC = () => <HomeContent />;
 
 export default Home;
